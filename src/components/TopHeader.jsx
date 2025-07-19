@@ -1,16 +1,26 @@
-import { AppBar, Box, IconButton, Stack, Typography } from '@mui/material'
+import { AppBar, Box, IconButton, Stack, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
 import { StyledToolbar } from '../utils/StyledComponents'
 
 import { Menu, Search, ShoppingCart } from '@mui/icons-material';
 import CustomMuiLink from './CustomMuiLink';
-import { Link as RouterLink } from 'react-router-dom';
+import MainLogo from '../assets/images/logo.jpeg';
+
+import "../styles/main.css"
 
 export default function TopHeader() {
+    const isLarge = useMediaQuery('(min-width:600px)');
+
     return (
         <React.Fragment>
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static">
+                <AppBar
+                    position="static"
+                    sx={{
+                        backgroundColor: "#6F8069",
+                        boxShadow: "0px 4px 10px 7px #00000029",
+                    }}
+                >
                     <StyledToolbar>
                         <IconButton
                             size="large"
@@ -22,6 +32,10 @@ export default function TopHeader() {
                             <Menu />
                         </IconButton>
 
+                        <div className='main-logo-container'>
+                            <img src={MainLogo} alt="main logo" />
+                        </div>
+
                         <Box
                             display={"flex"}
                             flexGrow={1}
@@ -31,27 +45,27 @@ export default function TopHeader() {
                             height={"-webkit-fill-available"}
                         >
                             <Typography
-                                variant="h4"
-                                noWrap
+                                variant={isLarge ? "h4" : "body1"}
 
-                                sx={{ fontFamily: ["Shadows Into Light", "cursive"].join(","), fontWeight: 700, letterSpacing: '1.3px' }}
+                                sx={{ fontFamily: ["Shadows Into Light", "cursive"].join(","), fontWeight: 700, letterSpacing: '1.3px', whiteSpace: { lg: 'noWrap', xs: 'initial' } }}
                             >
                                 Little Pixie Dust by Shraddha
                             </Typography>
                             <Stack
                                 direction="row"
                                 spacing={2}
+                                sx={{ display: { lg: 'flex', xs: 'none' } }}
                             >
                                 <CustomMuiLink to="/">
                                     Home
                                 </CustomMuiLink>
-                                <CustomMuiLink to="/">
-                                    Shop with me
+                                <CustomMuiLink to="/categories">
+                                    Categories
                                 </CustomMuiLink>
-                                <CustomMuiLink to="/">
-                                    About me
+                                <CustomMuiLink to="/about-me">
+                                    About Shraddha
                                 </CustomMuiLink>
-                                <CustomMuiLink to="/">
+                                <CustomMuiLink to="/contact-us">
                                     Contact Us
                                 </CustomMuiLink>
                             </Stack>
@@ -72,6 +86,6 @@ export default function TopHeader() {
                     </StyledToolbar>
                 </AppBar>
             </Box>
-        </React.Fragment>
+        </React.Fragment >
     )
 }

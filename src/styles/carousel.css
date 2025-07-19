@@ -4,3 +4,62 @@
     object-fit: cover;
     background-color: #f4f4f4;
 }
+
+.category-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.category-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.category-title {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 0;
+    transition: opacity 0.3s linear;
+}
+
+.category-container:hover .category-title {
+  opacity: 1;
+}
+
+.slick-dots {
+    position: absolute !important;
+    bottom: 30px !important;
+    background: rgba(0, 0, 0, 0.4);
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 9px 12px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-dots li {
+    height: 100% !important;
+}
+
+.slick-dots li .customarrow {
+    background-color: #ffffff4a;
+    height: 4px;
+    border-radius: 6px;
+}
+
+.slick-dots li.slick-active .customarrow {
+    background-color: #ffffff;
+    height: 6px;
+}
