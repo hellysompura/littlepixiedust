@@ -5,7 +5,7 @@ export default function AboutMe() {
     return (
         <React.Fragment>
             <Container maxWidth="md">
-                <Grid container spacing={3} marginY={2}>
+                <Grid container spacing={3} marginY={2} marginTop={"22vh"}>
                     <Grid size={12} display={"flex"} justifyContent={"center"}>
                         <Typography variant='h4'>Meet Shraddha</Typography>
                     </Grid>

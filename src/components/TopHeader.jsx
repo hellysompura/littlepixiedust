@@ -7,18 +7,37 @@ import CustomMuiLink from './CustomMuiLink';
 import MainLogo from '../assets/images/logo.jpeg';
 
 import "../styles/main.css"
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function TopHeader() {
     const isLarge = useMediaQuery('(min-width:600px)');
 
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleCategoryClick = (e) => {
+        if (location.pathname === "/") {
+            // Already on home, scroll directly
+            const el = document.getElementById("categories-section");
+            if (el) el.scrollIntoView({ behavior: "smooth" });
+        } else {
+            // Navigate to home and scroll after it renders
+            e.preventDefault(); // Prevent default <a> tag behavior
+            navigate("/", {
+                state: { scrollTo: "categories-section" }
+            });
+        }
+    };
+
     return (
         <React.Fragment>
-            <Box sx={{ flexGrow: 1 }}>
+            <Box sx={{ flexGrow: 1, height: "100%" }}>
                 <AppBar
-                    position="static"
+                    position="fixed"
                     sx={{
                         backgroundColor: "#6F8069",
                         boxShadow: "0px 4px 10px 7px #00000029",
+                        height: "20vh"
                     }}
                 >
                     <StyledToolbar>
@@ -42,7 +61,7 @@ export default function TopHeader() {
                             justifyContent={"space-between"}
                             alignItems={"center"}
                             flexDirection={"column"}
-                            height={"-webkit-fill-available"}
+                            height={"70%"}
                         >
                             <Typography
                                 variant={isLarge ? "h4" : "body1"}
@@ -59,7 +78,7 @@ export default function TopHeader() {
                                 <CustomMuiLink to="/">
                                     Home
                                 </CustomMuiLink>
-                                <CustomMuiLink to="/categories">
+                                <CustomMuiLink to="/" onClick={handleCategoryClick}>
                                     Categories
                                 </CustomMuiLink>
                                 <CustomMuiLink to="/about-me">

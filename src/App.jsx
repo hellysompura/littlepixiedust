@@ -7,6 +7,8 @@ import Home from './components/pages/Home'
 import Categories from './components/pages/Categories'
 import AboutMe from './components/pages/AboutMe'
 import ContactUs from './components/pages/ContactUs'
+import Footer from './components/Footer'
+import ProductList from './components/pages/ProductList'
 
 function App() {
 
@@ -16,11 +18,13 @@ function App() {
       <TopHeader />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/categories" element={<Categories />} />
         <Route path="/about-me" element={<AboutMe />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/product/:productType" element={<ProductList />} />
+
       </Routes>
 
+      <Footer />
     </React.Fragment>
   )
 }

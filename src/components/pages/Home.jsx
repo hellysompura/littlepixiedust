@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Carousel from '../common/Carousel'
 
 // images import
@@ -9,11 +9,21 @@ import img4 from "../../assets/images/carousel4.jpeg"
 import img5 from "../../assets/images/carousel5.jpeg"
 import Categories from './Categories'
 import { Grid } from '@mui/material'
+import { useLocation } from 'react-router-dom'
 
 export default function Home() {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.state?.scrollTo) {
+            const el = document.getElementById(location.state.scrollTo);
+            if (el) el.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [location]);
+
     return (
         <React.Fragment>
-            <Grid container>
+            <Grid container marginTop={"20vh"}>
                 <Grid size={12}>
                     <Carousel images={[img1, img2, img3, img4, img5]} />
                 </Grid>
