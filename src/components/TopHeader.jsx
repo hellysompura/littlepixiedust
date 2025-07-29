@@ -35,8 +35,6 @@ export default function TopHeader() {
                 <AppBar
                     position="fixed"
                     sx={{
-                        backgroundColor: "#6F8069",
-                        boxShadow: "0px 4px 10px 7px #00000029",
                         height: "20vh"
                     }}
                 >
@@ -61,7 +59,7 @@ export default function TopHeader() {
                             justifyContent={"space-between"}
                             alignItems={"center"}
                             flexDirection={"column"}
-                            height={"70%"}
+                            height={"80%"}
                         >
                             <Typography
                                 variant={isLarge ? "h4" : "body1"}

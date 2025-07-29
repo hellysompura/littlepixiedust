@@ -3,6 +3,13 @@ import { AppBar, Container, Divider, Grid, IconButton, Stack, Toolbar, Typograph
 import React from 'react'
 
 export default function Footer() {
+
+    const handlePolicies = (e, policy) => {
+        console.log(e, policy)
+
+         window.open(`/${policy}`, '_self')
+    }
+
     return (
         <React.Fragment>
             <AppBar
@@ -27,10 +34,10 @@ export default function Footer() {
                                         divider={<Divider orientation="vertical" flexItem />}
                                         spacing={2}
                                     >
-                                        <Typography variant='body2'>Custom Order Request</Typography>
-                                        <Typography variant='body2'>Shipping Policy</Typography>
-                                        <Typography variant='body2'>Refund Policy</Typography>
-                                        <Typography variant='body2'>Privacy Policy</Typography>
+                                        <Typography variant='body2' className='cursor-pointer'>Custom Order Request</Typography>
+                                        <Typography variant='body2' className='cursor-pointer' onClick={e => handlePolicies(e, 'shipping-policy')}>Shipping Policy</Typography>
+                                        <Typography variant='body2' className='cursor-pointer' onClick={e => handlePolicies(e, 'refund-policy')}>Refund Policy</Typography>
+                                        <Typography variant='body2' className='cursor-pointer' onClick={e => handlePolicies(e, 'privacy-policy')}>Privacy Policy</Typography>
                                     </Stack>
                                 </Grid>
                             </Grid>

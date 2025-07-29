@@ -4,11 +4,8 @@ import { alpha, Button, InputBase, Toolbar } from "@mui/material";
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     alignItems: 'flex-start',
     paddingTop: 8,
-    paddingBottom: 16,
-    // Override media queries injected by theme.mixins.toolbar
-    '@media all': {
-        minHeight: 128,
-    },
+    backgroundColor: "#6F8069",
+    boxShadow: "0px 4px 10px 7px #00000029",
 }));
 
 const FormInputField = styled(InputBase)(({ theme }) => ({
