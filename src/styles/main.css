@@ -11,3 +11,14 @@
 .cursor-pointer {
     cursor: pointer !important;
 }
+
+.login-container {
+    height: 50vh;
+    width: 35%;
+    padding: 3%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}

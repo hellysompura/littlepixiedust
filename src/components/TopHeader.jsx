@@ -2,7 +2,7 @@ import { AppBar, Box, IconButton, Stack, Typography, useMediaQuery } from '@mui/
 import React from 'react'
 import { StyledToolbar } from '../utils/StyledComponents'
 
-import { Menu, Search, ShoppingCart } from '@mui/icons-material';
+import { Login, Menu, Search, ShoppingCart } from '@mui/icons-material';
 import CustomMuiLink from './CustomMuiLink';
 import MainLogo from '../assets/images/logo.jpeg';
 
@@ -28,6 +28,10 @@ export default function TopHeader() {
             });
         }
     };
+
+    const handleLogin = () => {
+        window.open('/login', '_self')
+    }
 
     return (
         <React.Fragment>
@@ -89,8 +93,8 @@ export default function TopHeader() {
                         </Box>
 
 
-                        <IconButton size="large" aria-label="search" color="inherit">
-                            <Search />
+                        <IconButton size="large" aria-label="search" color="inherit" onClick={handleLogin}>
+                            <Login />
                         </IconButton>
                         <IconButton
                             size="large"

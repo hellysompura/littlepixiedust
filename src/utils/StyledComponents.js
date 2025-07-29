@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { alpha, Button, InputBase, Toolbar } from "@mui/material";
+import { alpha, Button, InputBase, TextField, Toolbar } from "@mui/material";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     alignItems: 'flex-start',
@@ -42,6 +42,32 @@ const FormInputField = styled(InputBase)(({ theme }) => ({
     },
 }));
 
+const LogInTextField = styled(TextField)(({ theme }) => ({
+    '& .MuiInputAdornment-root': {
+        display: "flex",
+        marginTop: "0 !important"
+    },
+    '& .MuiInputLabel-shrink': {
+        transform: 'none',
+    },
+
+    '& .MuiFilledInput-input': {
+        overflow: 'hidden',
+        borderRadius: 4,
+        backgroundColor: '#F3F6F9',
+        padding: '8px 12px',
+
+
+        '&:hover': {
+            backgroundColor: 'transparent',
+        },
+        '& input:invalid + fieldset': {
+            backgroundColor: 'transparent',
+            borderColor: '#690606ff',
+        },
+    },
+}));
+
 const MainButton = styled(Button)(({ theme }) => ({
     color: "#FFFFFF",
     backgroundColor: "#2F372F",
@@ -51,4 +77,4 @@ const MainButton = styled(Button)(({ theme }) => ({
     },
 }));
 
-export { StyledToolbar, FormInputField, MainButton }
+export { StyledToolbar, FormInputField, MainButton, LogInTextField }
