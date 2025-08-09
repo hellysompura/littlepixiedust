@@ -77,4 +77,18 @@ const MainButton = styled(Button)(({ theme }) => ({
     },
 }));
 
-export { StyledToolbar, FormInputField, MainButton, LogInTextField }
+const LinkButton = styled(Button)(({ theme }) => ({
+    color: "#2F372FDB",
+    backgroundColor: "transparent",
+    textTransform: "capitalize",
+    textDecoration: "underline",
+    '&:hover': {
+        color: "#2F372F",
+    },
+}));
+
+const CommonTypography = {
+    textTransform: "capitalize",
+}
+
+export { StyledToolbar, FormInputField, MainButton, LogInTextField, LinkButton, CommonTypography }

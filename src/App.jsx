@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import ProductList from './components/pages/ProductList'
 import Policies from './components/pages/Policies'
 import LogIn from './components/pages/LogIn'
+import ProductPage from './components/pages/ProductPage'
 
 function App() {
   const location = useLocation()
@@ -31,6 +32,7 @@ function App() {
           <Route path="/about-me" element={<AboutMe />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/product/:productType" element={<ProductList />} />
+          <Route path="/product-page/:productId" element={<ProductPage />} />
           <Route path="/:policyType" element={<Policies />} />
         </Routes>
       </div>
