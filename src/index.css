@@ -1,4 +1,78 @@
-html, body {
+@import "tailwindcss";
+@import "tailwindcss/theme";
+
+@theme {}
+
+:root {
+  --primary-soft-pink: #F9A8C4;
+  --primary-blue: #93C7DF;
+  --primary-white: #FFF0F5;
+  --primary-plum: #5C3D6E;
+  --primary-mauve: #B08FAE;
+  --primary-light-pink: #FCE8F0;
+  --primary-yellow: #F5DC7A;
+  --primary-dark-purple: #7B4F8E;
+  --primary-soft-lavender: #C4B5E3;
+  --primary-light-grey: #F5F5F5;
+
+  /* opacity soft pink 10 to 90 */
+  --opacity-soft-pink-10: #F9A8C41A;
+  --opacity-soft-pink-20: #F9A8C433;
+  --opacity-soft-pink-30: #F9A8C44D;
+  --opacity-soft-pink-40: #F9A8C466;
+  --opacity-soft-pink-50: #F9A8C480;
+  --opacity-soft-pink-60: #F9A8C499;
+  --opacity-soft-pink-70: #F9A8C4B3;
+  --opacity-soft-pink-80: #F9A8C4CC;
+  --opacity-soft-pink-90: #F9A8C4E6;
+
+  /* opacity blue 10 to 90 */
+  --opacity-blue-10: #93C7DF1A;
+  --opacity-blue-20: #93C7DF33;
+  --opacity-blue-30: #93C7DF4D;
+  --opacity-blue-40: #93C7DF66;
+  --opacity-blue-50: #93C7DF80;
+  --opacity-blue-60: #93C7DF99;
+  --opacity-blue-70: #93C7DFB3;
+  --opacity-blue-80: #93C7DFCC;
+  --opacity-blue-90: #93C7DFE6;
+
+  /* opacity plum 10 to 90 */
+  --opacity-plum-10: #5C3D6E1A;
+  --opacity-plum-20: #5C3D6E33;
+  --opacity-plum-30: #5C3D6E4D;
+  --opacity-plum-40: #5C3D6E66;
+  --opacity-plum-50: #5C3D6E80;
+  --opacity-plum-60: #5C3D6E99;
+  --opacity-plum-70: #5C3D6EB3;
+  --opacity-plum-80: #5C3D6ECC;
+  --opacity-plum-90: #5C3D6EE6;
+  
+  /* opacity mauve 10 to 90 */
+  --opacity-mauve-10: #B08FAE1A;
+  --opacity-mauve-20: #B08FAE33;
+  --opacity-mauve-30: #B08FAE4D;
+  --opacity-mauve-40: #B08FAE66;
+  --opacity-mauve-50: #B08FAE80;
+  --opacity-mauve-60: #B08FAE99;
+  --opacity-mauve-70: #B08FAEB3;
+  --opacity-mauve-80: #B08FAECC;
+  --opacity-mauve-90: #B08FAEE6;
+  
+  /* opacity light pink 10 to 90 */
+  --opacity-light-pink-10: #FCE8F01A;
+  --opacity-light-pink-20: #FCE8F033;
+  --opacity-light-pink-30: #FCE8F04D;
+  --opacity-light-pink-40: #FCE8F066;
+  --opacity-light-pink-50: #FCE8F080;
+  --opacity-light-pink-60: #FCE8F099;
+  --opacity-light-pink-70: #FCE8F0B3;
+  --opacity-light-pink-80: #FCE8F0CC;
+  --opacity-light-pink-90: #FCE8F0E6;
+}
+
+html,
+body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -7,4 +81,6 @@ html, body {
   width: 100vw;
   overflow-y: auto;
   overflow-x: hidden;
+
+  font-family: 'Baloo 2', sans-serif;
 }
