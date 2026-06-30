@@ -6,12 +6,15 @@ import Home from './pages/home/Home'
 export default function Layout() {
     return (
         <React.Fragment>
-            <div className='h-17.5 shadow-md'>
+            <div className='h-[70px] shadow-md'>
                 <Header />
             </div>
-            <Routes>
-                <Route path="/" element={<Home />} />
-            </Routes>
+
+            <div className='w-full'>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                </Routes>
+            </div>
         </React.Fragment>
     )
 }

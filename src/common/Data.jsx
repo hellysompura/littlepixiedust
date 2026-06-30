@@ -31,26 +31,49 @@ export const CAROUSEL_SLIDES = [
     {
         image: Slider1,
         title: "New Arrivals",
-        description: "Check out our latest collection"
+        description: "Fresh styles, just landed here, hurry up!"
     },
     {
         image: Slider2,
         title: "Girls",
-        description: "Discover our girls collection"
+        description: "Cute, comfy, and made for play"
     },
     {
         image: Slider3,
         title: "Boys",
-        description: "Discover our boys collection"
+        description: "Built for adventure, made to last"
     },
     {
         image: Slider4,
         title: "Baby",
-        description: "Discover our baby collection"
+        description: "Soft essentials for your little one"
     },
     {
         image: Slider5,
         title: "Sale",
-        description: "Check out our sale items"
+        description: "Great styles, even better prices"
+    }
+];
+
+export const AMENITIES = [
+    {
+        name: "Free Shipping",
+        description: "On orders over $50",
+        icon: "Van"
+    },
+    {
+        name: "Easy Returns",
+        description: "30-day free return policy",
+        icon: "RefreshCw"
+    },
+    {
+        name: "Safe Materials",
+        description: "Non-toxic and eco-friendly",
+        icon: "Shield"
+    },
+    {
+        name: "Gift Wrapping",
+        description: "Beautiful packaging for every occasion",
+        icon: "Gift"
     }
 ];
