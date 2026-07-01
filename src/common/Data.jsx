@@ -4,6 +4,12 @@ import Slider3 from "../assets/images/carousel/Slider-3.png";
 import Slider4 from "../assets/images/carousel/Slider-4.png";
 import Slider5 from "../assets/images/carousel/Slider-5.png";
 
+import NewArrivals from "../assets/images/category/new-arrivals.png";
+import Girls from "../assets/images/category/girls.png";
+import Boys from "../assets/images/category/boys.png";
+import Baby from "../assets/images/category/baby.png";
+import Sale from "../assets/images/category/sale.png";
+
 export const HEADER_CATEGORIES = [
   {
     name: "New Arrivals",
@@ -81,22 +87,22 @@ export const AMENITIES = [
 export const CATEGORY_IMAGES = [
   {
     name: "New Arrivals",
-    image: Slider1,
+    image: NewArrivals,
   },
   {
     name: "Girls",
-    image: Slider2,
+    image: Girls,
   },
   {
     name: "Boys",
-    image: Slider3,
+    image: Boys,
   },
   {
     name: "Baby",
-    image: Slider4,
+    image: Baby,
   },
   {
     name: "Sale",
-    image: Slider5,
+    image: Sale,
   },
 ];

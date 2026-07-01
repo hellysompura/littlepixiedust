@@ -3,6 +3,8 @@ import CarouselSection from "./CarouselSection";
 import { AMENITIES, CAROUSEL_SLIDES } from "../../common/Data";
 import IconComponent from "../../components/IconComponent";
 import Category from "./Category";
+import BestSeller from "./BestSeller";
+import NewArrivals from "./NewArrivals";
 
 export default function Home() {
   return (
@@ -39,9 +41,13 @@ export default function Home() {
         <Category />
       </div>
 
-      {/* <div className="max-w-350 mx-auto py-4">
-        <Category />
-      </div> */}
+      <div className="max-w-350 mx-auto py-4">
+        <BestSeller />
+      </div>
+
+      <div className="max-w-350 mx-auto py-4">
+        <NewArrivals />
+      </div>
     </React.Fragment>
   );
 }
