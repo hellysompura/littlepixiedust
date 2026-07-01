@@ -2,6 +2,7 @@ import React from "react";
 import CarouselSection from "./CarouselSection";
 import { AMENITIES, CAROUSEL_SLIDES } from "../../common/Data";
 import IconComponent from "../../components/IconComponent";
+import Category from "./Category";
 
 export default function Home() {
   return (
@@ -24,13 +25,23 @@ export default function Home() {
                   <p className="font-semibold text-(--primary-plum) text-sm">
                     {name}
                   </p>
-                  <p className="text-xs text-[#9B5EA7]">{description}</p>
+                  <p className="text-xs text-(--primary-mauve)">
+                    {description}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      <div className="max-w-350 mx-auto py-4">
+        <Category />
+      </div>
+
+      {/* <div className="max-w-350 mx-auto py-4">
+        <Category />
+      </div> */}
     </React.Fragment>
   );
 }

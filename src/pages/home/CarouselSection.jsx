@@ -34,7 +34,7 @@ const CarouselSection = ({ slides = [] }) => {
                 <h2 className="text-6xl font-bold">{slide.title}</h2>
                 <p className="text-xl">{slide.description}</p>
 
-                <button className="mt-4 bg-white text-black px-6 py-2 rounded-full font-semibold hover:bg-gray-200 transition-colors">
+                <button className="mt-4 bg-white text-black px-6 py-2 rounded-full font-semibold hover:bg-(--opacity-mauve-30) transition-colors">
                   Learn More
                 </button>
               </div>
