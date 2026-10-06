@@ -5,7 +5,7 @@ import { HEADER_CATEGORIES } from '../common/Data'
 export default function Header() {
     return (
         <React.Fragment>
-            <div className='max-w-[1400px] mx-auto flex items-center justify-between h-full'>
+            <div className='max-w-350 mx-auto flex items-center justify-between h-full'>
                 <div>Logo</div>
                 <div>
                     <ul className='flex gap-2'>

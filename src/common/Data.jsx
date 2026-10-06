@@ -106,3 +106,48 @@ export const CATEGORY_IMAGES = [
     image: Sale,
   },
 ];
+
+export const FOOTER_CATEGORIES = {
+  Help: {
+    name: "Help",
+    icon: "Help",
+
+    subCategories: [
+      {
+        name: "Size Guide",
+        icon: "SizeGuide",
+      },
+      {
+        name: "Shipping Info",
+        icon: "Shipping",
+      },
+      {
+        name: "Returns",
+        icon: "Returns",
+      },
+      {
+        name: "Contact Us",
+        icon: "ContactUs",
+      },
+    ],
+  },
+  AboutUs: {
+    name: "About Us",
+    icon: "AboutUs",
+
+    subCategories: [
+      {
+        name: "Our Story",
+        icon: "OurStory",
+      },
+      {
+        name: "Careers",
+        icon: "Careers",
+      },
+      {
+        name: "Contact",
+        icon: "Contact",
+      },
+    ],
+  },
+};

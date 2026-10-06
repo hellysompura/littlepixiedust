@@ -1,11 +1,28 @@
 @import "tailwindcss";
 @import "tailwindcss/theme";
 
-
 .swiper-slide {
-    font-size: 18px;
-    color: #fff;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 40px 60px;
+  font-size: 18px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 60px;
+}
+
+/* 2. LEGACY WEBKIT ENGINE (Safari, older Chrome/Edge) */
+/* Total width of vertical scrollbar / height of horizontal scrollbar */
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track background */
+body::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background: inherit;
+}
+
+/* Draggable thumb handle */
+body::-webkit-scrollbar-thumb {
+  border-radius: 4px;
 }

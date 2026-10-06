@@ -69,6 +69,17 @@
   --opacity-light-pink-70: #FCE8F0B3;
   --opacity-light-pink-80: #FCE8F0CC;
   --opacity-light-pink-90: #FCE8F0E6;
+
+  /* opacity white 10 to 90 */
+  --opacity-white-10: #FFFFFF1A;
+  --opacity-white-20: #FFFFFF33;
+  --opacity-white-30: #FFFFFF4D;
+  --opacity-white-40: #FFFFFF66;
+  --opacity-white-50: #FFFFFF80;
+  --opacity-white-60: #FFFFFF99;
+  --opacity-white-70: #FFFFFFB3;
+  --opacity-white-80: #FFFFFFCC;
+  --opacity-white-90: #FFFFFFE6;
 }
 
 html,
